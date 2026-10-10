@@ -83,7 +83,7 @@ Serve Python 3: se non è installato, al primo avvio il programma propone di ins
 Se compare "LaunchMac.command è danneggiato e non può essere aperto" oppure "non hai i privilegi di accesso adeguati", il file non è rotto: macOS blocca gli script scaricati da internet. Per sbloccarlo, una volta sola:
 
 1. Apri il **Terminale** (Applicazioni → Utility → Terminale)
-2. Scrivi `xattr -cr ` con uno spazio finale, trascina dentro la cartella **NasdaqHistoricalDataDownloader** e premi **Invio**
+2. Scrivi `xattr -cr ` con uno spazio finale, trascina dentro la cartella **Nasdaq Historical Data Downloader** e premi **Invio**
 3. Scrivi `chmod +x ` con uno spazio finale, trascina dentro il file **LaunchMac.command** e premi **Invio**
 4. Rifai doppio clic su `LaunchMac.command`
 
