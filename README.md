@@ -84,13 +84,13 @@ Il file **non è danneggiato**. macOS blocca così gli script scaricati da inter
 
 1. Apri il **Terminale** (Applicazioni → Utility → Terminale)
 2. Scrivi `xattr -cr ` con uno spazio finale, **senza premere Invio**
-3. Trascina la cartella **Nasdaq Historical Data Downloader** dentro la finestra del Terminale: il percorso si completa da solo
+3. Trascina la cartella **NomeCartellaEstratta** dentro la finestra del Terminale: il percorso si completa da solo
 4. Premi **Invio** (non compare nessun messaggio, è normale) e rifai doppio clic su `LaunchMac.command`
 
 Il comando risulterà simile a questo:
 
 ```bash
-xattr -cr "/Users/tuonome/Downloads/Nasdaq Historical Data Downloader"
+xattr -cr "/Users/tuonome/Downloads/NomeCartellaEstratta"
 ```
 
 `xattr -cr` rimuove dai file della cartella l'attributo di "quarantena" che macOS aggiunge ai download. Non modifica il contenuto dei file e non cambia le impostazioni di sicurezza del Mac.
