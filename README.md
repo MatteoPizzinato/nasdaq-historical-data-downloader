@@ -112,5 +112,3 @@ Distribuito con licenza **MIT**: vedi il file [LICENSE](LICENSE). La licenza rig
 Fatto da **Matteo** ([@MatteoPizzinato](https://github.com/MatteoPizzinato)), studente universitario e programmatore non proprio bravissimo (sarei un sistemista...).
 
 Se ti è stato utile, lascia una ⭐: è il mio modo di sapere che non ho perso solo io i pomeriggi a scaricare CSV a mano.
-
-Copyright (c) 2026 Matteo Pizzinato
