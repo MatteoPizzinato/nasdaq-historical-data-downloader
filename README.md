@@ -68,7 +68,7 @@ AAPL,2026-10-07,226.10,228.00,225.40,227.50,45123456
 
 ## Installazione e uso
 
-1. Scarica lo zip del programma ed estrailo dove vuoi
+1. Scarica `NasdaqHistoricalDataDownloader.zip` dall'[ultima release](https://github.com/MatteoPizzinato/nasdaq-historical-data-downloader/releases/latest) ed estrailo dove vuoi (non usare il pulsante "Code → Download ZIP": su Mac il lanciatore non partirebbe)
 2. Apri `tickers.txt` e scrivi i ticker (nomi dei titoli secondo il NASDAQ) che ti interessano, uno per riga
 3. Doppio clic su:
    - **Se hai un PC Windows** → `LaunchWindows.vbs`
@@ -78,22 +78,23 @@ AAPL,2026-10-07,226.10,228.00,225.40,227.50,45123456
 
 Serve Python 3: se non è installato, al primo avvio il programma propone di installarlo in automatico. Tutti i dettagli sono nel file `LEGGIMI.txt`.
 
-### Mac: "LaunchMac.command è danneggiato e non può essere aperto"
+### Mac: il lanciatore non si apre
 
-Il file **non è danneggiato**. macOS blocca così gli script scaricati da internet che non sono firmati da uno sviluppatore Apple registrato. Per sbloccarlo, una volta sola:
+Se compare "LaunchMac.command è danneggiato e non può essere aperto" oppure "non hai i privilegi di accesso adeguati", il file non è rotto: macOS blocca gli script scaricati da internet. Per sbloccarlo, una volta sola:
 
 1. Apri il **Terminale** (Applicazioni → Utility → Terminale)
-2. Scrivi `xattr -cr ` con uno spazio finale, **senza premere Invio**
-3. Trascina la cartella **NomeCartella.zip** dentro la finestra del Terminale: il percorso si completa da solo
-4. Premi **Invio** (non compare nessun messaggio, è normale) e rifai doppio clic su `LaunchMac.command`
+2. Scrivi `xattr -cr ` con uno spazio finale, trascina dentro la cartella **NasdaqHistoricalDataDownloader** e premi **Invio**
+3. Scrivi `chmod +x ` con uno spazio finale, trascina dentro il file **LaunchMac.command** e premi **Invio**
+4. Rifai doppio clic su `LaunchMac.command`
 
-Il comando risulterà simile a questo:
+I comandi risulteranno simili a questi:
 
 ```bash
-xattr -cr "/Users/tuonome/Downloads/NomeCartella.zip"
+xattr -cr "/Users/tuonome/Downloads/NasdaqHistoricalDataDownloader"
+chmod +x "/Users/tuonome/Downloads/Nasdaq HistoricalDataDownloader/LaunchMac.command"
 ```
 
-`xattr -cr` rimuove dai file della cartella l'attributo di "quarantena" che macOS aggiunge ai download. Non modifica il contenuto dei file e non cambia le impostazioni di sicurezza del Mac.
+`xattr -cr` rimuove l'attributo di "quarantena" che macOS aggiunge ai download; `chmod +x` rende il file eseguibile. Nessuno dei due modifica il contenuto dei file o le impostazioni di sicurezza del Mac.
 
 ## Limiti e avvertenze
 
@@ -112,3 +113,5 @@ Distribuito con licenza **MIT**: vedi il file [LICENSE](LICENSE). La licenza rig
 Fatto da **Teo** ([@MatteoPizzinato](https://github.com/MatteoPizzinato)), studente universitario e programmatore non proprio bravissimo (sarei un sistemista...).
 
 Se ti è stato utile, lascia una ⭐: è il mio modo di sapere che non ho perso solo io i pomeriggi a scaricare CSV a mano.
+
+Copyright (c) 2026 Matteo Pizzinato
