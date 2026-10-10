@@ -90,8 +90,8 @@ Se compare "LaunchMac.command è danneggiato e non può essere aperto" oppure "n
 I comandi risulteranno simili a questi:
 
 ```bash
-xattr -cr "/Users/tuonome/Downloads/NasdaqHistoricalDataDownloader"
-chmod +x "/Users/tuonome/Downloads/Nasdaq HistoricalDataDownloader/LaunchMac.command"
+xattr -cr "/Users/tuonome/Downloads/Nasdaq Historical Data Downloader"
+chmod +x "/Users/tuonome/Downloads/Nasdaq Historical Data Downloader/LaunchMac.command"
 ```
 
 `xattr -cr` rimuove l'attributo di "quarantena" che macOS aggiunge ai download; `chmod +x` rende il file eseguibile. Nessuno dei due modifica il contenuto dei file o le impostazioni di sicurezza del Mac.
