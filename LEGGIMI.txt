@@ -1,0 +1,50 @@
+NASDAQ HISTORICAL DATA DOWNLOADER
+=================================
+
+CONTENUTO DELLA CARTELLA
+  NasdaqHistoricalDataDownloader.pyw  il programma (finestra grafica)
+  LaunchWindows.vbs                   doppio clic per avviarlo su Windows
+  LaunchMac.command                   doppio clic per avviarlo su Mac
+  tickers.txt                         i ticker da scaricare, uno per riga
+  HistoricalData/                     qui vengono salvati i CSV
+  Installa Python/                    usato in automatico dal lanciatore Windows
+
+PRIMO AVVIO: PYTHON
+  Il programma ha bisogno di Python 3. Se non c'e', il lanciatore
+  ("LaunchWindows" o "LaunchMac") lo rileva e propone di installarlo:
+  - Windows: scarica da python.org l'installer ufficiale di Python 3.13.16,
+    ne verifica il checksum e lo installa solo per il tuo utente
+    (non servono permessi di amministratore). Si apre una finestra blu di
+    PowerShell che mostra l'avanzamento.
+  - Mac: scarica da python.org il pacchetto ufficiale di Python 3.13.16,
+    ne verifica il checksum e lo installa; macOS chiede la password del Mac.
+  Serve una connessione internet. Non servono altre librerie.
+  Se preferisci, puoi installare Python a mano da https://www.python.org/downloads/
+
+USO
+  1. Apri tickers.txt e scrivi i ticker (es. AAPL, MSFT), uno per riga.
+     Le righe che iniziano con # vengono ignorate.
+  2. Avvia il programma con il doppio clic sul lanciatore del tuo sistema.
+  3. Scegli l'orizzonte: 1 mese, 6 mesi, 1 anno, 5 anni, MAX (10 anni).
+  4. Premi "Scarica". Il log mostra l'esito per ogni ticker.
+  I file finiscono in HistoricalData/ con nome TICKER_historical_PERIODO.csv
+  (es. AAPL_historical_1m.csv, AAPL_historical_5y.csv, AAPL_historical_max.csv).
+  Tra un ticker e l'altro c'e' una pausa di 2,5 secondi.
+
+AVVISI DI SICUREZZA AL PRIMO DOPPIO CLIC
+  Mac: se compare "LaunchMac.command e' danneggiato e non puo' essere
+       aperto", il file NON e' danneggiato: macOS blocca cosi' gli script
+       scaricati da internet. Per sbloccarlo, una volta sola:
+       1. apri il Terminale (Applicazioni > Utility > Terminale);
+       2. scrivi  xattr -cr  seguito da uno spazio, senza premere Invio;
+       3. trascina la cartella "Nasdaq Historical Data Downloader" dentro
+          la finestra del Terminale;
+       4. premi Invio e rifai doppio clic su "LaunchMac.command".
+  Windows: SmartScreen puo' mostrare "Windows ha protetto il PC":
+       "Ulteriori informazioni" > "Esegui comunque".
+
+LIMITI NOTI
+  - api.nasdaq.com e' un'API interna non documentata: puo' cambiare o
+    bloccare le richieste senza preavviso.
+  - "MAX" corrisponde a 10 anni (timeline=y10), come sul sito.
+  - Controlla i Termini d'uso di nasdaq.com prima di un uso non personale.

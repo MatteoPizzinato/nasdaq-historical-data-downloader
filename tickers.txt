@@ -1,0 +1,37 @@
+# Lista di esempio: 35 titoli quotati al Nasdaq. Sostituiscila con la tua.
+# Un ticker per riga (sono ammessi anche separatori a virgola). '#' = commento.
+AAPL
+MSFT
+NVDA
+AMZN
+GOOGL
+META
+TSLA
+AVGO
+COST
+NFLX
+AMD
+ADBE
+PEP
+CSCO
+INTC
+QCOM
+TXN
+AMGN
+INTU
+AMAT
+ISRG
+BKNG
+HON
+SBUX
+GILD
+MDLZ
+ADP
+VRTX
+REGN
+LRCX
+PANW
+MU
+ADI
+KLAC
+PYPL
